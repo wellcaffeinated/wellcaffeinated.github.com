@@ -6,7 +6,6 @@ tags:
   - religion
 disqus_id: irresponsible-subway-poster-bible-messages
 ---
-{% include JB/setup %}
 
 There has recently been a trend of religious and atheist organizations circulating posters and billboards that promote their respective world views. Christian posters generally claim that [god is great, you should love him](http://2.bp.blogspot.com/_NpQEWDE3XBg/TRThMAftZLI/AAAAAAAABsI/7wqfKxmf9kM/s1600/God+is.jpg), islamic posters claim that [Jesus is a prophet of islam](http://images.smh.com.au/2011/05/27/2391014/ipad-art-wide-jesus-2-420x0.jpg), and atheist posters suggest that you can be a good person if you don't believe in god. Atheist posters seem to get most of the criticism for some odd reason.
 

@@ -7,7 +7,6 @@ tags:
   - MVC
 disqus_id: simple-javascript-templating
 ---
-{% include JB/setup %}
 
 Suppose you need just a little bit of templating functionality, here's a code snippet for you:
 

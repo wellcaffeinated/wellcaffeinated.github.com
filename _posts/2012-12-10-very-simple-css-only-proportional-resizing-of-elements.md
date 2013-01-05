@@ -7,7 +7,6 @@ tags:
   - css
 disqus_id: very-simple-css-only-proportional-resizing-of-elements
 ---
-{% include JB/setup %}
 
 A while ago I posted about [Proportional Resizing of Web Page Elements Using Only CSS](http://wellcaffeinated.net/articles/2012/06/26/proportional-resizing-of-web-page-elements-using-only-css). At the time, it seemed like the only solution... but fortunately a slightly counter intuitive CSS standard provides a *much better way* to get this same effect. Credit goes to [Nathan D. Ryan for his solution on Stackoverflow](http://stackoverflow.com/a/6615994/1729163).
 

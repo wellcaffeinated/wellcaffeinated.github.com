@@ -6,7 +6,6 @@ tags:
   - development
 disqus_id: better-content-editing-in-wolf-cms
 ---
-{% include JB/setup %}
 
 Originally, I created this blog using a modified version of [Frog CMS](http://www.madebyfrog.com), but soon upgraded to [Wolf CMS](http://www.wolfcms.org) which is a fork of Frog under active development. I thought that Wolf would bring about huge improvements in the backend design, and while it improved slightly, one major gap still stood out: *the page editor*. 
 

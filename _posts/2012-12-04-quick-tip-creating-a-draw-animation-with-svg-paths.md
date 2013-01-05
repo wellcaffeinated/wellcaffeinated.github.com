@@ -8,7 +8,6 @@ tags:
   - svg
 disqus_id: quick-tip-creating-a-draw-animation-with-svg-paths
 ---
-{% include JB/setup %}
 
 Let's say you want to create an animation that draws some kind of shape. Like watching a pencil draw a line on paper. Turns out this is really easy with SVG paths.
 

@@ -8,7 +8,6 @@ tags:
   - typography
 disqus_id: font-smoothing-detection-modernizr-style
 ---
-{% include JB/setup %}
 
 I recently have been playing around with [Google Webfonts](http://www.google.com/webfonts) which allow you much more freedom in font selection on the web... for free. I've been using Google Webfonts on this very website, which is why the fonts are so pretty... at least I think so.
 

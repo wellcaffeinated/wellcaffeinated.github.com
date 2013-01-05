@@ -7,7 +7,6 @@ tags:
   - dance
 disqus_id: a-quantum-leap-at-tedx-waterloo
 ---
-{% include JB/setup %}
 
 Fortunately, our show at TEDx Waterloo was a hit! The videos aren't up yet, but will be soon. In the meantime, here's the picture of our quantum leap. You can [see some more pictures here](http://flic.kr/p/bs82EL).
 

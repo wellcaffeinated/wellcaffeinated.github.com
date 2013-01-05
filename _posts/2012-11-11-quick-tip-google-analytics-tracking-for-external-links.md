@@ -8,7 +8,6 @@ tags:
   - analytics
 disqus_id: quick-tip-google-analytics-tracking-for-external-links
 ---
-{% include JB/setup %}
 
 Here's a nice snippet I've been using to track visitor exit flows on some of the sites I've built. You see, google analytics doesn't automatically log what *external* link visitors click on to exit your site. You might want to know this if your site is trying to reach a certain goal of funneling visitors to a particular place on another server.
 

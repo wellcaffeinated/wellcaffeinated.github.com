@@ -7,7 +7,6 @@ tags:
   - policy
 disqus_id: starbucks-officially-supports-gay-marriage
 ---
-{% include JB/setup %}
 
 Starbucks coffee is not my favorite, to say the least. I actually have trouble drinking their regular roasts... **they taste burnt**. There, I said it. But something new is brewing at Starbucks; *support for marriage equality*. I first heard about this from *Coffee Loving Skeptic*, [that has a nice writeup of the situation][cls]. I think it's worth quoting Starbucks' official statement:
 

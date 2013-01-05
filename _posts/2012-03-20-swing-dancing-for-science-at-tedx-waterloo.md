@@ -7,7 +7,6 @@ tags:
   - dance
 disqus_id: swing-dancing-for-science-at-tedx-waterloo
 ---
-{% include JB/setup %}
 
 The past few months have been a buzz of excitement and exhaustion. I, along with several fellow swing dancers, have been working with physicist and swing dancer, Krister Shalm, on a project that mixes quantum mechanics and swing dancing! This project has been particularly exciting for me because, as some may know, I share Krister's enthusiasm for science communication, physics and Lindy Hop. Being able to mix them together makes this really fun… and makes for some well caffeinated weekends.
 

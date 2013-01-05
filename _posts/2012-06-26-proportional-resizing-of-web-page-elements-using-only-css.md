@@ -6,7 +6,6 @@ tags:
   - development
 disqus_id: proportional-resizing-of-web-page-elements-using-only-css
 ---
-{% include JB/setup %}
 
 There are times, throughout the development process where you are surprised to find something that really should be easy. But it isn't.
 

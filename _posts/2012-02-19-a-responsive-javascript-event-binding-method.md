@@ -8,7 +8,6 @@ tags:
   - responsive design
 disqus_id: a-responsive-javascript-event-binding-method
 ---
-{% include JB/setup %}
 
 I've recently been doing a lot of [responsive web development](http://www.alistapart.com/articles/responsive-web-design/) work. I was building a component that could have several different states depending on the size of the viewport. Each of these states dictated different user interaction. For example, a mouse move interaction in one state could turn into a mouse click interaction in another. So what I needed was a way to easily activate and deactivate JavaScript events depending on the viewport size.
 

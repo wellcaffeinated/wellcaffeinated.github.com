@@ -6,7 +6,6 @@ tags:
   - education
 disqus_id: education-isnt-a-place-you-go-its-a-thing-you-do
 ---
-{% include JB/setup %}
 
 Spend any time in the technology industry, and you'll begin to notice "working from home" is becoming more commonplace. Large and small tech agencies are slowly opening up to the idea of letting their employees work remotely. A day or two a week, I build websites in the comfort of my own home. With all of the recent developments in technology, it's very easy to keep up to date and connected without going into an office. Some technology companies don't even have an office at all.
 

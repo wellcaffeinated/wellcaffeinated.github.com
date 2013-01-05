@@ -8,7 +8,6 @@ tags:
   - phyiscs
 disqus_id: calculating-the-acceleration-of-an-airplane-using-a-smartphone
 ---
-{% include JB/setup %}
 
 As a web developer who loves physics, I'm always looking for ways to use what I know about web browser technology to do neat physics experiments. A few months ago I was sitting in an airport ready to return home. I had been thinking about the [device orientation](/articles/fun-with-javascript-and-device-orientation) detection capability of smartphones for a while, and was wondering what I could do with it. With airplanes on the mind, I decided to use the small amount of time I had to write a quick webapp to record the orientation of my phone during takeoff. Since I could write this purely in javascript, I could safely put my phone into "Airplane Mode" and continue to monitor its orientation. Javascript's "localStorage" could also save the data I accumulated. With the orientation data, I could then get a rough estimate of the acceleration profile of the airplane during takeoff (or any other time, really).
 
