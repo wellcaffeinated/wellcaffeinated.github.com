@@ -8,6 +8,7 @@ tags:
   - physics
 disqus_id: sheep-bounce-like-an-ideal-gas-for-science
 ---
+{% include JB/setup %}
 
 After seeing the silly, yet addictive website, [cat-bounce.com](http://cat-bounce.com), I decided to [quickly remix the idea](http://wellcaffeinated.github.com/Sheep-Bounce) - *For Science*! 
 

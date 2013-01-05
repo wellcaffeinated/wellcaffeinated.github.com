@@ -6,6 +6,7 @@ tags:
   - development
 disqus_id: your-javascript-is-slow-common-and-not-so-common-optimizations
 ---
+{% include JB/setup %}
 
 Optimization considerations for any language can lead down a long and complex road. For JavaScript, things get even more complex because the same code can be run on a huge number of permutations of browser, version, OS, and machine (think mobile devices too).
 

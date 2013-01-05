@@ -7,6 +7,7 @@ tags:
   - development
 disqus_id: fun-with-javascript-and-device-orientation
 ---
+{% include JB/setup %}
 
 There's some new "black magic" in the world of JavaScript... and its name is "device orientation". This emerging feature allows JavaScript to monitor the physical orientation of the current device. This is not to be confused with the `orientationchange` event, which triggers when mobile devices change from portrait to landscape views and vice versa. No, instead, this means I can tilt my computer or phone or tablet and have JavaScript do stuff based on the way I've tilted it.
 

@@ -8,6 +8,7 @@ tags:
   - secularism
 disqus_id: the-ten-secular-commandments-dot-com
 ---
+{% include JB/setup %}
 
 Amidst the craziness that is "work", I have managed to find the time, not only to build one website (this one), but TWO! Behold, [The Ten Secular Commandments](http://thetensecularcommandments.com). It's still in the works, but it's there, and functional.
 
