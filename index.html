@@ -25,8 +25,8 @@ group: navigation
       <li class="disabled"><a href="#">&laquo;</a></li>
       {% endif %}
       
-      {% assign ofst = paginator.page | minus:4 %}
-      {% assign curpage = paginator.page | plus:1 | minus:ofst %}
+      {% assign ofst = (paginator.page | minus:4) %}
+      {% assign curpage = (paginator.page | plus:1 | minus:ofst) %}
       <!--
       offset: {{ofst}}
       curpage: {{curpage}}
