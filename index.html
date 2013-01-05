@@ -34,6 +34,8 @@ group: navigation
         {% else %}
         <li><a href="{{BASE_PATH}}/">1</a></li>
         {% endif %}
+
+        {% assign ofst = 0 %}
       {% endif %}
 
       {% for count in (2..paginator.total_pages) limit:curpage offset:ofst %}
