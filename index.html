@@ -28,7 +28,7 @@ group: navigation
       {% capture ofst %}{{paginator.page | minus:4}}{% endcapture %}
       {% capture curpage %}{{paginator.page | plus:1 | minus:ofst}}{% endcapture %}
 
-      {% if ofst < 0 %}
+      {% if ofst == '-1' or ofst == '-2' or ofst == '-3' %}
         {% if paginator.page == 1 %}
         <li class="active"><a href="#">1</a></li>
         {% else %}
