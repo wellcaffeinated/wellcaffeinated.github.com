@@ -27,6 +27,10 @@ group: navigation
       
       {% assign ofst = paginator.page | minus:4 %}
       {% assign curpage = paginator.page | plus:1 | minus:ofst %}
+      <!--
+      offset: {{ofst}}
+      curpage: {{curpage}}
+      -->
 
       {% if ofst < 0 %}
         {% if paginator.page == 1 %}
