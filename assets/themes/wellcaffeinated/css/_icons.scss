@@ -1,0 +1,91 @@
+@import '../fonts/WebSymbols-Font-Pack/stylesheet.css';
+@import '../fonts/heydings/stylesheet.css';
+// @import '../fonts/iconic/_iconic.scss';
+
+.icon {
+    position: relative;
+    vertical-align: text-top;
+
+    &:before {
+        font-family: 'HeydingsCommonIconsRegular';
+        font-size: 0.9em;
+        margin-right: 0.3em;
+    }
+    &:hover {
+        
+    }
+    &.home:before {
+        content: 'H';
+    }
+    &.articles:before {
+        content: 'D';
+    }
+    &.about:before {
+        content: 'i';
+    }
+    &.link:before {
+        content: 'a';
+    }
+    &.print:before {
+        content: 'p';
+    }
+    &.tag:before {
+        content: 't';
+    }
+    &.time:before {
+        content: 'T';
+    }
+    &.rss:before {
+        content: 'R';
+    }
+    &.comments:before {
+        content: 'b';
+    }
+    &.sharethis:before {
+        content: 'e';
+    }
+    &.uparrow:before {
+        content: 'u';
+    }
+
+    &.facebook:before {
+        font-family: 'WebSymbolsRegular';
+        content: 'f';
+    }
+    &.twitter:before {
+        font-family: 'WebSymbolsRegular';
+        content: 't';
+    }
+    &.googleplus:before {
+        font-family: 'WebSymbolsRegular';
+        content: 'g';
+    }
+    &.linkedin:before {
+        font-family: 'WebSymbolsRegular';
+        content: 'l';
+    }
+    &.email:before {
+        font-family: 'WebSymbolsRegular';
+        content: '@';
+    }
+
+    /*just icon*/
+    &.clps {
+        overflow:hidden;
+        text-indent: -9999em;
+        width: 1em;
+        display: inline-block;
+
+        &:hover {
+            text-decoration: none;
+        }
+        &:before {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            text-indent: 0;
+            margin: -0.5em 0 0 -0.5em;
+        }
+    }
+}
+    

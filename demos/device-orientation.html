@@ -1,0 +1,179 @@
+---
+layout: page
+title: Device Orientation Demo
+header: Device Orientation Demo
+group: demos
+---
+{% include JB/setup %}
+
+<style>
+#world {
+    position:relative;
+    overflow: hidden;
+    width: 100%;
+    height: 40em;
+    margin:0;
+    border: 1px solid #191919;
+}
+
+#arrowWrap,
+#gravityLabel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: auto;
+    width: 0;
+}
+
+#gravityLabel {
+    width: auto;
+}
+
+/* body */
+#arrow {
+    content: '';
+    position: absolute;
+    margin: auto;
+    top: -100%;
+    width: 0;
+    height: 15px;
+    border: 2px solid black;
+}
+
+/* tip */
+#arrow:after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: -10px;
+    border: 10px solid black;
+    border-color: black transparent transparent;
+    margin-bottom: -20px;
+}
+
+#angles {
+    margin: 1em 20px;
+}
+
+.drawer {
+    font-size: 2em;
+    border: 1px solid black;
+    overflow:hidden;
+    position: relative;
+}
+.drawer .inner {
+    position: relative;
+    width: 35em;
+}
+</style>
+
+<p>You can download the code on <a href="https://github.com/wellcaffeinated/Orientation">GitHub</a>. The blog post referencing this demo <a href="/articles/fun-with-javascript-and-device-orientation">is here</a>.</p>
+<p>This example shows the (normalized) projection of gravity along the face of your device. The positive x direction is right and the positive y direction is down.</p>
+<div id="world">
+  <div id="angles">Loading...</div>
+  <div id="arrowWrap"><div id="arrow"></div></div>
+  <div id="gravityLabel"></div>
+</div>
+
+<h2>Example of sliding text using device orientation (carousel?)</h2>
+<div class="drawer">
+  <p class="inner">Here is some text you can read by tilting your device left and right as you see fit.</p>
+</div>
+
+<script>
+require(
+    [
+        'jquery',
+        'modules/device-gravity'
+    ],
+    
+    function( $, gravity ) {
+        
+        function init(){
+
+            var arrowWrap = $('#arrowWrap')
+                ,arrow = $('#arrow')
+                ,message = $('#angles')
+                ,gravLabel = $('#gravityLabel')
+                
+                ,arrowHeight = ''
+                ,arrowRotate = ''
+                ,msgText = ''
+                ,gravMsgText = ''
+                ;
+            
+            //subscribe to device orientation events
+            gravity.subscribe( function( g, dir ){
+                
+                arrowHeight = 200*g.r+'px';
+                arrowRotate = 'rotate('+ (g.ang*180/Math.PI-90) + 'deg)';
+                
+                msgText = 'Front Back: <code>'+dir.fb+'</code> degrees<br/>'+
+                    'Left Right: <code>'+dir.lr+'</code> degrees<br/>'+
+                    'compass: <code>'+dir.dir+'</code> degrees<br/><br/>'+
+                    'x: <code>'+g.x+'</code><br/>'+
+                    'y: <code>'+g.y+'</code><br/>'
+                    ;
+                
+                gravMsgText = 'g: <code>'+g.r+' @ '+(g.ang*180/Math.PI)+'deg</code>';
+            });
+            
+            // input html with info at regular interval
+            setInterval(function(){
+                        
+                    if ( arrowWrap.length && arrow.length ){
+                        
+                        arrow.css( 'height', arrowHeight );
+                        arrowWrap.css( Modernizr.prefixed('transform'), arrowRotate );
+                        
+                    }
+                    
+                    if ( message.length ){
+                        
+                        message.html( msgText );
+                        
+                    }
+                    
+                    if( gravLabel.length ){
+                        
+                        gravLabel.html( gravMsgText );
+                        
+                    }
+                    
+                }, 500);
+        }
+
+        $(init);
+    }
+);
+
+// controls drawer example
+require(
+[
+    'jquery',  
+    'modules/device-gravity'
+],
+function($, gravity){
+
+    var inner = $('.drawer .inner').css('left',0)
+        ,maxRight = inner.innerWidth() - 50
+        ,force
+        ;
+
+    gravity.subscribe(function( g, dir ){
+        
+        force = g.x;
+    
+    });
+
+    setInterval(function(){
+
+        var newVal = parseInt(inner.css('left')) + 18*3*force;
+
+        newVal = Math.max(-maxRight, newVal); //left bound
+        newVal = Math.min(0, newVal); //right bound
+        inner.css('left',  newVal);
+
+    }, 40);
+});
+</script>

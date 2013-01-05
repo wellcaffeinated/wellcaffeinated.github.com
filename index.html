@@ -1,0 +1,58 @@
+---
+layout: default
+title : Blog
+header : Blog
+group: navigation
+---
+{% include JB/setup %}
+
+{% if paginator %}
+    {% assign posts_collate = paginator.posts %}
+{% else %}
+    {% assign posts_collate = site.posts %}
+{% endif %}
+
+{% include JB/posts_collate %}
+
+<!-- end posts -->
+{% if paginator %}
+    <!-- Pagination -->
+    <div class="pagination">
+      <ul>
+      {% if paginator.previous_page %}
+      <li><a href="{{BASE_PATH}}/page{{paginator.previous_page}}">&laquo;</a></li>
+      {% else %}
+      <li class="disabled"><a href="#">&laquo;</a></li>
+      {% endif %}
+      
+      {% assign ofst = paginator.page | minus:4 %}
+      {% assign curpage = paginator.page | plus:1 | minus:ofst %}
+
+      {% if ofst < 0 %}
+        {% if paginator.page == 1 %}
+        <li class="active"><a href="#">1</a></li>
+        {% else %}
+        <li><a href="{{BASE_PATH}}/">1</a></li>
+        {% endif %}
+      {% endif %}
+
+      {% for count in (2..paginator.total_pages) limit:curpage offset:ofst %}
+        {% if count == paginator.page %}
+        <li class="active"><a href="#">{{count}}</a></li>
+        {% else %}
+        <li><a href="{{BASE_PATH}}/page{{count}}">{{count}}</a></li>
+        {% endif %}
+      {% endfor %}
+      
+      {% if paginator.next_page %}
+      <li><a href="{{BASE_PATH}}/page{{paginator.next_page}}">&raquo;</a></li>
+      {% else %}
+      <li class="disabled"><a href="#">&raquo;</a></li>
+      {% endif %}
+      </ul>
+    </div>
+
+{% endif %}
+
+{% assign comment_justcount = true %}
+{% include JB/comments %}

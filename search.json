@@ -1,0 +1,23 @@
+---
+---
+{% include JB/setup %}
+[
+{% for post in site.posts %}{
+    "title": "{{post.title | escape}}",
+    "tags": ["{{post.tags | join:'","'}}"],
+    "url": "{{BASE_PATH}}{{post.url}}"
+},{% endfor %}
+{% for post in site.pages %}
+{% if post.group == 'projects' %}{
+    "title": "{{post.title | escape}}",
+    "url": "{{BASE_PATH}}{{post.url}}"
+},{% endif %}
+{% endfor %}
+{% for post in site.pages %}
+{% if post.group == 'demos' %}{
+    "title": "{{post.title | escape}}",
+    "url": "{{BASE_PATH}}{{post.url}}"
+},{% endif %}
+{% endfor %}
+false
+]

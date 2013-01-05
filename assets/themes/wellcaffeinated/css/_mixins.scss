@@ -1,0 +1,21 @@
+// utility functions for building vendor prefixes
+
+$default-prefixes: webkit moz ms o;
+
+@mixin build-prefix-values($property, $val, $pfxval: false, $prefixes: $default-prefixes) {
+
+    @each $prefix in $prefixes {
+        $value: $val;
+
+        @if $pfxval {
+            $value: -#{$prefix}-#{$val};
+        }
+
+        -#{$prefix}-#{$property}: #{$value};
+    }
+    #{$property}: #{$val};
+} 
+
+@mixin text-shadow ($def) {
+    @include build-prefix-values('text-shadow', $def);
+}

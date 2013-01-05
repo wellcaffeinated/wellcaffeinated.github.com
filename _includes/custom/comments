@@ -1,0 +1,21 @@
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    {% if site.safe == false %}var disqus_developer = 1;{% endif %}
+    var disqus_shortname = '{{ site.JB.comments.disqus.short_name }}'; // required: replace example with your forum shortname
+    {% if page.disqus_id %}var disqus_identifier = '{{page.disqus_id}}';{% else %}var disqus_identifier = '{{page.id}}';{% endif %}
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    !function(js){
+
+        {% if comment_justcount != null %} js.shift(); {% endif %}
+
+        js.sort(function(scr) {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/'+scr;
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            return -1;
+        });
+    }(['embed.js', 'count.js', false]);
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+{% assign comment_justcount = nil %}

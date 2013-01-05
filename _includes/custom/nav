@@ -1,0 +1,15 @@
+{% if page.title == 'Blog' %}
+    {% assign active = 'blog' %}
+{% endif %}
+{% if page.title == 'Projects' %}
+    {% assign active = 'projects' %}
+{% endif %}
+{% if page.title == 'Bio/Portfolio' %}
+    {% assign active = 'portfolio' %}
+{% endif %}
+
+<li class="page-blog {% if active == 'blog' %}active{% endif %}"><a href="{{ BASE_PATH }}/">Blog</a></li>
+<li class="page-projects {% if active == 'projects' %}active{% endif %}"><a href="{{ BASE_PATH }}/projects">Projects</a></li>
+<li class="page-portfolio {% if active == 'portfolio' %}active{% endif %}"><a href="{{ BASE_PATH }}/portfolio">Bio/Portfolio</a></li>
+
+{% assign active = nil %}

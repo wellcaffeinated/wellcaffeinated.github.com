@@ -1,0 +1,19 @@
+{% for node in pages_list %}
+  {% if node.title != null %}
+    {% if group == null or group == node.group %}
+
+      {% if last == nil or last.title != node.title %}
+        {% assign last = node %}
+        {% if page.title == node.title %}
+      	<li class="page-{{node.title | downcase}} active"><a href="{{ BASE_PATH }}{{node.url}}" class="active">{{node.title}}</a></li>
+      	{% else %}
+      	<li class="page-{{node.title | downcase}}"><a href="{{ BASE_PATH }}{{node.url}}">{{node.title}}</a></li>
+      	{% endif %}
+      {% endif %}
+
+    {% endif %}
+  {% endif %}
+{% endfor %}
+{% assign pages_list = nil %}
+{% assign group = nil %}
+{% assign last = nil %}
