@@ -1,11 +1,3 @@
-require(
-    
-    {
-        priority: [ 'require-config' ]
-    },
-    
-    [ 
-        'mediators/index'
-    ]
-    
-);
+require(['require-config'], function(){
+    require(['mediators/index']);
+});

@@ -1,14 +1,18 @@
-// > cd {location of require-build.js}
-// > r.js -o require-build.js
+/* 
+ * build profile
+ * All config options: https://github.com/jrburke/r.js/blob/master/build/example.build.js
+ * node r.js -o ./config.build.js 
+ */
 ({
     appDir: './',
     baseUrl: './',
-    dir: '../build',
-    //optimize: 'none',
+    dir: '../js-build',
+    // optimize: 'none',
 	optimize: 'uglify',
-    paths: {
-        'jquery': 'modules/jquery' // Reset jQuery's path to the module's directory
-    },
+    fileExclusionRegExp: /^\.|node_modules/,
+    findNestedDependencies: false,
+    mainConfigFile: './require-config.js',
+
     modules: [        
         {
             name: 'boot-index',

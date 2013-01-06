@@ -2,12 +2,14 @@ define(
     
     [
         'jquery',
+        'require',
         'bootstrap-affix',
         'bootstrap-typeahead'
     ],
     
     function( 
 		$,
+		require,
 		_affix,
 		_typeahead
 	) {

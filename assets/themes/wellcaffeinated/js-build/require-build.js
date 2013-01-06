@@ -1,0 +1,1 @@
+({appDir:"./",baseUrl:"./",dir:"../js-build",optimize:"uglify",fileExclusionRegExp:/^\.|node_modules/,findNestedDependencies:!1,mainConfigFile:"./require-config.js",modules:[{name:"boot-index",include:["require-config","mediators/index"]}]})

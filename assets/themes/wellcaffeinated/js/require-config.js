@@ -1,4 +1,5 @@
-window.require = {
+window.require = window.require || {config: function(c){window.require = c;}}
+require.config({
     shim: {
         'bootstrap-affix': {
             deps: ['jquery']
@@ -20,4 +21,4 @@ window.require = {
     map: {
         
     }
-};
+});

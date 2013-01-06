@@ -1,0 +1,9 @@
+
+boot-index.js
+----------------
+require-config.js
+boot-index.js
+vendor/jquery.min.js
+vendor/bootstrap/bootstrap-affix.js
+vendor/bootstrap/bootstrap-typeahead.js
+mediators/index.js

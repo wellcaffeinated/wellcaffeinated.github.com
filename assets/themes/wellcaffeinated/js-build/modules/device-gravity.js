@@ -1,0 +1,1 @@
+define(["jquery","./device-orientation","./pubsub"],function(e,t,n){var r="/device/orientation/gravity",i=n(r);return t.subscribe(function(e){var t=Math.sin(e.fb*Math.PI/180)*Math.cos(e.lr*Math.PI/180),n=Math.sin(e.lr*Math.PI/180),r=-Math.atan(n/t)+(t<0?Math.PI:0)+Math.PI/2,s=Math.sqrt(n*n+t*t);i.publish({x:n,y:t,ang:r,r:s},e)}),e.extend({channel:r},i)})

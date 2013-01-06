@@ -81,6 +81,7 @@ group: demos
 </div>
 
 <script>
+require(['boot-index'], function(){
 require(
     [
         'jquery',
@@ -175,5 +176,6 @@ function($, gravity){
         inner.css('left',  newVal);
 
     }, 40);
+});
 });
 </script>

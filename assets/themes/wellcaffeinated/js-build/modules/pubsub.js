@@ -1,0 +1,1 @@
+define(["jquery"],function(e){var t={};return function(n){var r,i,s;return n.length&&(s=t[n]),s||(r=e.Callbacks(),s={publish:r.fire,subscribe:r.add,unsubscribe:r.remove},n&&(t[n]=s)),s}})

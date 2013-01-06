@@ -53,8 +53,12 @@
     <!--<![endif]-->
 
     <script src="{{ ASSET_PATH }}/js/vendor/modernizr.custom.js"></script>
+    {% if site.safe %}
+    <script data-main="{{ ASSET_PATH }}/js-build/boot-index" src="{{ ASSET_PATH }}/js-build/vendor/require.js"></script>
+    {% else %}
     <script src="{{ ASSET_PATH }}/js/require-config.js"></script>
     <script data-main="{{ ASSET_PATH }}/js/boot-index" src="{{ ASSET_PATH }}/js/vendor/require.js"></script>
+    {% endif %}
 
 </head>
 <body>
