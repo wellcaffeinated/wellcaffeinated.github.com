@@ -8263,19 +8263,25 @@ ul.tags li a > span:empty::after {
   #sidebar .backToTop {
     display: block;
   }
+
+  /* line 566, main.scss */
+  .typeahead {
+    width: 99%;
+    left: 0 !important;
+  }
 }
 @media only screen and (max-width: 480px) {
-  /* line 571, main.scss */
+  /* line 576, main.scss */
   #header .inner {
     padding: 8.33%;
   }
 
-  /* line 576, main.scss */
+  /* line 581, main.scss */
   #nav .logo {
     display: none;
   }
 
-  /* line 580, main.scss */
+  /* line 585, main.scss */
   #site-logo {
     font-size: 6.8462em;
     letter-spacing: 0;
