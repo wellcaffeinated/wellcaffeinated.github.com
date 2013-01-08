@@ -1,0 +1,68 @@
+//
+// Typography presets
+//
+
+@import "compass/typography/vertical_rhythm";
+ 
+$base-font-size: 14px;
+$base-line-height: 70px/3;
+$relative-font-sizing: true;
+
+// @include establish-baseline;
+
+body {
+    font: 87.5%/1.66666 $sansFontFamily;
+    -webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
+    -webkit-tap-highlight-color: rgb(255,255,255);
+
+    padding: 0;
+}
+
+h1, h2, h3 { margin-top:0; margin-bottom:0; }
+
+h1 { 
+    // font-size:2.11538em; 
+    // padding:1.9238em 0;
+    @include adjust-font-size-to(2.11538 * $base-font-size, 5/3);
+    padding: rhythm(10/9) 0;
+}
+
+h2 {
+    // font-size:1.61538em;
+    // padding:1.7456em 0;
+    @include adjust-font-size-to(1.6538 * $base-font-size, 4/3);
+    padding: rhythm(10/9) 0;
+}
+
+h3 {
+    // font-size:1.30769em;
+    // padding:1.71528em 0;
+    @include adjust-font-size-to(1.30769 * $base-font-size, 1);
+    padding: rhythm(1) 0;
+}
+
+h4, h5, h6 {
+    margin: 0;
+    @include adjust-font-size-to($base-font-size);
+    padding: rhythm(1) 0;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: $serifFontFamily;
+}
+
+ul, ol, p {
+    margin-bottom: rhythm(1);
+}
+
+li {
+    line-height: inherit;
+}
+
+time {
+    font-family: $monoFontFamily;
+}
+
+blockquote {
+    font-style: italic;
+}

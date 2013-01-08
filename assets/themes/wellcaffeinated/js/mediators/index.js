@@ -130,7 +130,7 @@ define(
 			var $nav = $('#nav-area');
 
 			$nav
-				.wrap( $('<div/>').css('height', $nav.height()) )
+				.wrap( $('<div/>').css('height', $nav.outerHeight()) )
 				.affix({
 					offset: {
 						top: function(){

@@ -23,40 +23,7 @@ $dropdownLinkColorHover: $wellblack;
 // @import "compass_twitter_bootstrap/_mixins.scss";
 // @import "compass_twitter_bootstrap/_reset.scss";
 @import "_mixins.scss";
-
-.border-box {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-/*  Typography presets
-    ------------------  */
-body {
-    font: 87.5%/1.66666 $sansFontFamily;
-    -webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
-    -webkit-tap-highlight-color: rgb(255,255,255);
-
-    padding: 0;
-}
-
-h1, h2, h3 { margin-top:0; margin-bottom:0; }
-h1 { font-size:2.11538em; padding:1.9238em 0; }
-h2 { font-size:1.61538em; padding:1.7456em 0; }
-h3 { font-size:1.30769em; padding:1.71528em 0; }
-h4, h5, h6 { font-size: 1em; padding: 1em 0; }
-
-h1, h2, h3, h4, h5, h6{
-    font-family: $serifFontFamily;
-}
-
-time {
-    font-family: $monoFontFamily;
-}
-
-blockquote {
-    font-style: italic;
-}
+@import "_typography.scss";
 
 pre {
     background: #fff;
@@ -101,11 +68,11 @@ a.icon:focus {
     background: $wellbeige;
 
     .inner {
-        padding: 6%;
+        padding: rhythm(1) 6%;
         width: auto;
 
         & > div {
-            margin-bottom: 2em;
+            margin-bottom: rhythm(1);
         }
     }
 }
@@ -118,6 +85,10 @@ a.icon:focus {
         padding-top: 0;
     }
 
+    .creative-commons-licence {
+        margin-bottom: 1.4em;
+    }
+
     .contact {
 
         li {
@@ -128,13 +99,12 @@ a.icon:focus {
 
 #header {
     .intro {
-        font-size: 1.3077em;
         width: 100%;
         text-align: center; 
 
         p {
-            width: 50%;
-            float: right;
+            // font-size: 1.3077em;
+            @include adjust-font-size-to(1.3077 * $base-font-size);
             margin: 0;
             @include text-shadow( 0 1px 0 #fff );
         }
@@ -175,7 +145,7 @@ a.icon:focus {
 #nav-area {
     background: #191919;
     color: #F0EFD1;
-    padding: 0.4em 0 0.3em;
+    padding: 0.2em 0 0.3em;
 
     .inner {
         padding: 0 5.495%;
@@ -249,8 +219,8 @@ a.icon:focus {
 #sidebar {
 
     /*line up to top of article heading*/
-    padding: 6.33% 2em 10% 0;
-    margin-top: 4.1em;
+    padding: 0 2em 10% 0;
+    margin-top: rhythm(4.5);
 
     text-align: center;
     
@@ -265,9 +235,15 @@ a.icon:focus {
         margin-bottom: 0.3333em;
         line-height: 1.3333;
     }
+
+    #search-box {
+        margin-bottom: rhythm(1);
+    }
         
     .share {
-        font-size: 4em;
+        // font-size: 4em;
+        @include adjust-font-size-to(4 * $base-font-size);
+        margin: rhythm(1, 4 * $base-font-size) 0;
     
         a {
             text-decoration: none;
@@ -316,7 +292,7 @@ a.icon:focus {
 
 #main {
     position: relative;
-    padding: 8.33% 16.66% 16.66% 8.33%;
+    padding: rhythm(2) 16.66% rhythm(4) 8.33%;
 
     p {
         font: inherit;
@@ -387,8 +363,9 @@ a.icon:focus {
     
     .info {
         position: relative;
-        top: -50px;
-        font-size: 1.1em;
+        top: -(rhythm(3, 2.11538 * $base-font-size));
+        // font-size: 1.1em;
+        @include adjust-font-size-to(1.1 * $base-font-size);
 
         a:hover,
         a:focus {
