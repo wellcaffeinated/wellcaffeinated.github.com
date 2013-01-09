@@ -36,6 +36,7 @@ group: navigation
         {% endif %}
 
         {% assign ofst = 0 %}
+        {% capture curpage %}{{curpage | minus:1}}{% endcapture %}
       {% endif %}
 
       {% for count in (2..paginator.total_pages) limit:curpage offset:ofst %}
