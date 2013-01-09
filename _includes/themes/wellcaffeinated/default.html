@@ -116,7 +116,7 @@
                 <h3>Recent Articles</h3>
                 <ul class="recentArticlesList">
                     {% for node in site.posts limit:10 %}
-                        {% if node.title != null %}
+                        {% if node.title != nil and node.draft == nil %}
                             <li><a href="{{ BASE_PATH }}{{node.url}}">{{node.title}}</a></li>
                         {% endif %}
                     {% endfor %}
