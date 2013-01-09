@@ -4,7 +4,9 @@
     {% include custom/post_macro %}
 {% else %}
     {% for post in posts_collate %}
-    {% include custom/post_macro %}
+    {% unless post.draft %}
+        {% include custom/post_macro %}
+    {% endunless %}
     {% endfor %}
 {% endif %}
 {% assign posts_collate = nil %}

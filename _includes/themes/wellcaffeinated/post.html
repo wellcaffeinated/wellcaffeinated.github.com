@@ -1,3 +1,5 @@
 {% assign posts_collate = nil %}
 {% include custom/posts_collate %}
-{% include JB/comments %}
+{% unless page.draft %}
+    {% include JB/comments %}
+{% endunless %}

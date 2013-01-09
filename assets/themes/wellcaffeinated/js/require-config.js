@@ -6,6 +6,10 @@ require.config({
         },
         'bootstrap-typeahead': {
             deps: ['jquery']
+        },
+
+        'jquery.highlight': {
+            deps: ['jquery']
         }
     },
 
@@ -14,6 +18,8 @@ require.config({
         'json': 'plugins/json',
         
         'jquery': 'vendor/jquery.min',
+        'jquery.highlight': 'vendor/jquery.highlight',
+
         'bootstrap-affix': 'vendor/bootstrap/bootstrap-affix',
         'bootstrap-typeahead': 'vendor/bootstrap/bootstrap-typeahead'
     },

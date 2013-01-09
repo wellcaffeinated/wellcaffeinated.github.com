@@ -3,6 +3,7 @@ define(
     [
         'jquery',
         'require',
+        'jquery.highlight',
         'bootstrap-affix',
         'bootstrap-typeahead'
     ],
@@ -10,6 +11,7 @@ define(
     function( 
 		$,
 		require,
+		_jqh,
 		_affix,
 		_typeahead
 	) {
@@ -51,7 +53,7 @@ define(
 					);
 				}
 			}
-
+			console.log(results)
 			return results;
 		}
 
@@ -60,14 +62,14 @@ define(
 
 			if (searchData){
 
-				callback(formatResults(searchData));
+				callback(searchData);
 
 			} else {
 
 				require(['json!/search.json'], function(data){
 
-					searchData = data;
-					callback(formatResults(searchData));
+					searchData = formatResults(data);
+					callback(searchData);
 				});
 			}
 		}
@@ -152,6 +154,12 @@ define(
 						url = unescape( url );
 						window.location.pathname = url;
 					}
+				},
+				highlighter: function(item){
+
+					var q = this.query;
+					var ret = $('<div/>').html(item).highlight([ q ]).html();
+					return ret;
 				}
 			});
 		});

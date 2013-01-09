@@ -2,11 +2,12 @@
 ---
 {% include JB/setup %}
 [
-{% for post in site.posts %}{
+{% for post in site.posts %}
+{% unless post.draft %}{
     "title": "{{post.title | escape}}",
     "tags": ["{{post.tags | join:'","'}}"],
     "url": "{{BASE_PATH}}{{post.url}}"
-},{% endfor %}
+},{% endunless %}{% endfor %}
 {% for post in site.pages %}
 {% if post.group == 'projects' %}{
     "title": "{{post.title | escape}}",
