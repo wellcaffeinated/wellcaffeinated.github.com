@@ -131,3 +131,6 @@ JB :
   
   posts_collate :
     provider: "custom"
+
+  pages_list :
+    provider: "custom"

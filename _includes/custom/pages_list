@@ -1,5 +1,5 @@
 {% for node in pages_list %}
-  {% if node.title != null %}
+  {% if node.title != null and node.draft == nil %}
     {% if group == null or group == node.group %}
 
       {% if last == nil or last.title != node.title %}
