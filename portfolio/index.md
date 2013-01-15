@@ -22,9 +22,9 @@ I am still inquiring as to whether or not I can disclose the identity of the cli
 
 Please feel free to browse around my **[github account](https://github.com/wellcaffeinated)** for some **code samples**. In particular, I am currently developing a [**JavaScript physics engine** called *pQuery*](https://github.com/wellcaffeinated/pQuery). In addition to that I have completed the following projects:
 
-### [Sheep Bounce](http://wellcaffeinated.github.com/Sheep-Bounce)
+### [Sheep Bounce](http://minutephysics.github.com/Sheep-Bounce/)
 
-[![Sheep Bounce](/images/sheepbounce.gif)](http://wellcaffeinated.github.com/Sheep-Bounce)
+[![Sheep Bounce](/images/sheepbounce.gif)](http://minutephysics.github.com/Sheep-Bounce/)
 
 After seeing the silly, yet addictive website, [cat-bounce.com](http://cat-bounce.com), I decided to quickly remix the idea - *For Science*! Using artwork created by [Henry Reich](http://minutephysics.com), I created a small web app that allows users to play around with sheep that bounce around the screen. The sheep resemble how atoms might jiggle around in an ideal gas, so I used that as the beginning of a conversation about physics, which leads the user to an instructional MinutePhysics video.
 
