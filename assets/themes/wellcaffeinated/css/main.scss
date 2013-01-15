@@ -8,7 +8,7 @@ $wellbeige: #F0EFD1;
 $textColor: $wellblack;
 $linkColor: $wellred;
 
-$sansFontFamily: "Antic","Helvetica Neue", Helvetica, Arial, sans-serif;
+$sansFontFamily: "Metrophobic", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $serifFontFamily: "Alice", Georgia, "Times New Roman", Times, serif;
 $monoFontFamily: 'Inconsolata', Monaco, Menlo, Consolas, "Courier New", monospace !default;
 
@@ -28,6 +28,10 @@ $dropdownLinkColorHover: $wellblack;
 pre {
     background: #fff;
     background: rgba(255, 255, 255, 0.85);
+}
+
+strong {
+    color: #000;
 }
 
 /* Selection colours (easy to forget) */
@@ -296,9 +300,10 @@ a.icon:focus {
 
     p {
         font: inherit;
+        color: lighten(black, 22);
     }
 
-    p,
+    // p,
     h1,
     h2,
     h3,
@@ -334,7 +339,7 @@ a.icon:focus {
     .breadcrumbs {
         position: absolute;
         top: 2em;
-        font-family: 'Inconsolata', monospace;
+        font-family: $monoFontFamily;
     }
 
     .articleLink {
