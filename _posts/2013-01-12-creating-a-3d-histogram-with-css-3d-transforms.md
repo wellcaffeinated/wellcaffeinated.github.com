@@ -8,7 +8,7 @@ tags:
     - 3D
 ---
 
-Using CSS 3D transforms can be a bit a bit challenging. It's new, support is sketchy, and it requires a type of spatial thinking that we aren't used to on the web (yet). But the results are worth it. With a bit of CSS and some javascript for event binding, you can turn a boring old table into a 3D histogram like this one:
+Using CSS 3D transforms can be a bit challenging. It's new, support is sketchy, and it requires a type of spatial thinking that we aren't used to on the web (yet). But the results are worth it. With a bit of CSS and some javascript for event binding, you can turn a boring old table into a 3D histogram like this one:
 
 <style>
 .noselect *,
