@@ -10,12 +10,19 @@ require.config({
 
         'jquery.highlight': {
             deps: ['jquery']
+        },
+
+        'dot': {
+            exports: 'doT'
         }
     },
 
     paths: {
         'text': 'plugins/text',
+        'tpl' : 'plugins/tpl',
         'json': 'plugins/json',
+
+        'dot' : 'vendor/doT',
         
         'jquery': 'vendor/jquery.min',
         'jquery.highlight': 'vendor/jquery.highlight',

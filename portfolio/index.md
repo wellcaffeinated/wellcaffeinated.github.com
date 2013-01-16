@@ -47,3 +47,31 @@ I independently completed the **design** and **development**. The implementation
 **Full design and development of WellCaffeinated.net (this website)**. 
 
 I've implemented a fully responsive design, using a custom implementation of [Wolf CMS](http://wolfcms.org) to use the [TWIG templating system](http://twig.sensiolabs.org). The front-end uses [requireJS](http://requirejs.org) for asynchronous javascript module loading. (Note: I have chosen not to support Internet Explorer 7, and minimally support Internet Explorer 8, although I have extensive experience developing for both of these browsers too).
+
+## [Coderwall](https://coderwall.com/wellcaffeinated) Badges
+
+<div id="coderwall-badges">Loading...</div>
+
+<script>
+require(['boot-index'], function(){
+require(
+[
+    'jquery',
+    'tpl!templates/coderwall.tpl'
+],
+function(
+    $,
+    tpl
+){
+    $.ajax({
+        url: 'https://coderwall.com/wellcaffeinated.json',
+        dataType: 'jsonp',
+        success: function(response){
+
+            $('#coderwall-badges').html( tpl.render(response.data) );
+        }
+    });
+}
+);
+});
+</script>

@@ -34,6 +34,10 @@ strong {
     color: #000;
 }
 
+a strong {
+    color: inherit;
+}
+
 /* Selection colours (easy to forget) */
 img::selection      {background: transparent;}
 img::-moz-selection {background: transparent;}
@@ -482,6 +486,15 @@ ul.tags {
     
 #disqus_thread {
     margin-top: 2em;
+}
+
+/* trinkits */
+#coderwall-badges > ul {
+    margin: 0;
+}
+.coderwall-badge {
+    @extend .media-object;
+
 }
 
 //      Tablet Layout: 768px.

@@ -25,3 +25,23 @@ $default-prefixes: webkit moz ms o;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
+
+.media-object {
+    margin: 10px;
+
+    &,
+    .details {
+        overflow:hidden;
+        _overflow:visible;
+        zoom:1;
+    }
+
+    .thumbnail {
+        float:left;
+        margin-right: 10px;
+
+        img {
+            display:block;
+        }
+    }
+}
