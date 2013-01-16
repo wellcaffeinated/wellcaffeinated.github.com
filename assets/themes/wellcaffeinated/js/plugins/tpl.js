@@ -87,9 +87,9 @@ define(
     
         return {
             
-            load: load,
+            load: load//,
             
-            write: write
+            //write: write
         };
     }
 );
