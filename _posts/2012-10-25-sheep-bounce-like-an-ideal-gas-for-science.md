@@ -9,9 +9,9 @@ tags:
 disqus_id: sheep-bounce-like-an-ideal-gas-for-science
 ---
 
-After seeing the silly, yet addictive website, [cat-bounce.com](http://cat-bounce.com), I decided to [quickly remix the idea](http://wellcaffeinated.github.com/Sheep-Bounce) - *For Science*! 
+After seeing the silly, yet addictive website, [cat-bounce.com](http://cat-bounce.com), I decided to [quickly remix the idea](http://minutephysics.github.com/Sheep-Bounce/) - *For Science*! 
 
-[![Sheep Bounce](/images/sheepbounce.gif)](http://wellcaffeinated.github.com/Sheep-Bounce)
+[![Sheep Bounce](/images/sheepbounce.gif)](http://minutephysics.github.com/Sheep-Bounce/)
 
 Using artwork created by Henry Reich (of [MinutePhysics](http://minutephysics.com)), I created a small web app that allows you to play around with sheep that bounce around the screen. The sheep resemble how atoms might jiggle around in an ideal gas. My hope is that it sparks people's interest to know more about ideal gases. The silly app could be the beginning of a question about physics, so I've placed a button leading to one of Henry's videos in the side-panel.
 
