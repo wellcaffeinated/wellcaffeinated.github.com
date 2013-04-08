@@ -11,7 +11,7 @@ There are times, throughout the development process where you are surprised to f
 
 I came across such a thing recently while developing a responsive website for a client. One of the components involved a calendar layout that had to resize depending on the browser width. Usually, this is as easy as setting a percent width on the parent element, but this calendar had thumbnail images for each day that needed to be resized to _preserve the aspect ratio_. This meant that the whole calendar had to preserve its aspect ratio (more or less). This is actually a bit more tricky that it first looks. Let's take a look.
 
-**EDIT: I've recently discovered a better solution for this. I recommend [this new method](/articles/very-simple-css-only-proportional-resizing-of-elements) over the one described below.**
+**EDIT: I've recently discovered a better solution for this. I recommend [this new method](/articles/2012/12/10/very-simple-css-only-proportional-resizing-of-elements/) over the one described below.**
 
 ## Something that doesn't work
 
