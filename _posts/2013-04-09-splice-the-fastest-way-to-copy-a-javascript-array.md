@@ -1,10 +1,11 @@
 ---
 layout: post
-title: splice(0): The fastest way to copy a JavaScript array
+title: "splice(0): The fastest way to copy a JavaScript array"
 category: articles
 tags:
   - development
   - optimization
+published: false
 ---
 
 Just thought I'd share a quick tip for writing optimal JavaScript. When it comes to copying (non-typed) arrays, there are many ways to do it. But there is most definitely one **fastest** way to do it:
