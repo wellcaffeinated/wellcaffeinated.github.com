@@ -45,3 +45,53 @@ $default-prefixes: webkit moz ms o;
         }
     }
 }
+
+// Clearfix
+// --------
+// For clearing floats like a boss h5bp.com/q
+@mixin clearfix2 {
+    *zoom: 1;
+    &:before,
+    &:after {
+        display: table;
+        content: "";
+        // Fixes Opera/contenteditable bug:
+        // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+        line-height: 0;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+// Vertically center (vc) any container no matter how tall it is
+// -----------------------------------------------------------
+// Source: http://css-tricks.com/centering-in-the-unknown/
+// NOTE: There are two parts to this mixin, and there must
+// be two containers to make this work: an outter and an
+// inner container. This mixin will only work if you include
+// the outer-container mixin on the outer container, and the
+// inner-container mixin on the inner container. Pretty self
+// explanatory, but I want to make sure we all get it.
+// Pass in true to ignore adjusting the height. This works mainly
+// on cards.
+@mixin vc-outer-container( $ignoreHeight: 'false' ) {
+    @if $ignoreHeight == 'true' {
+        // do nothing
+    } @else {
+        height: 100%;
+    }
+    
+    &:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: -0.38em; /* Adjusts for spacing */
+        width:.1em;
+    }
+}
+@mixin vc-inner-container {
+    display: inline-block;
+    vertical-align: middle;
+}

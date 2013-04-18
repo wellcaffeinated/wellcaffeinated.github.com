@@ -1,0 +1,125 @@
+---
+layout: default
+title: Bio/Portfolio
+header: Bio/Portfolio
+group: navigation
+---
+{% include JB/setup %}
+
+<h1 class="hidden">Bio / Portfolio of Jasper Palfree</h1>
+
+<p>I'm a freelance web developer with a background in theoretical physics. 
+    I try my best to find ways to improve science education and communication.
+    You may find my nose poking out from behind a cup of coffee while I
+    tinker with web technologies, and make them do cool things. Speaking
+    of which, you can find some of those showcased below.
+</p>
+
+<p>Also, be sure to check out my profiles on:</p>
+<p>
+    <a target="_blank" class="profile-link" href="http://github.com/wellcaffeinated">GitHub</a>
+    and
+    <a target="_blank" class="profile-link" href="http://ca.linkedin.com/in/wellcaffeinated">LinkedIn</a>
+</p>
+
+<div id="showcase-wrap">
+
+    <div class="item">
+        <img class="thumb" width="685" src="/images/physics-js.png" />
+        <div class="shorttext">PhysicsJS - (in progress)</div>
+        <div class="longtext">
+            <p><a target="_blank" href="http://github.com/wellcaffeinated/PhysicsJS">Visit the github page</a></p>
+            <p>
+                A work in progress. I'm creating an easy-to-use physics engine in javascript.
+                This will allow front-end developers to easily create 2D physics simulations.
+            </p>
+            <p>Graphical examples coming soon!</p>
+        </div>
+    </div>
+
+    <div class="item">
+        <img class="thumb" width="685" src="/images/sheepbounce.gif" />
+        <div class="shorttext">Sheep Bounce - For Science</div>
+        <div class="longtext">
+            <p><a target="_blank" href="/Sheep-Bounce">Visit the original</a></p>
+            <p>
+                After seeing the silly, yet addictive website, 
+                <a target="_blank" href="http://cat-bounce.com">cat-bounce.com</a>, 
+                I decided to quickly remix the idea - <em>For Science</em>! 
+                Using drawings created by <a target="_blank" href="http://minutephysics.com">Henry Reich</a>, 
+                I created a small web app that allows users to play around with sheep that 
+                bounce around the screen. The sheep resemble how atoms might jiggle around 
+                in an ideal gas, so I used that as the beginning of a conversation about 
+                physics, which leads the user to an instructional MinutePhysics video.
+            </p>
+            <p>
+                This app was created with HTML5 Canvas, Box2D (with boxbox), 
+                twitter Bootstrap, requirejs, and Yeoman (for dependency management).
+            </p>
+        </div>
+    </div>
+
+    <div class="item">
+        <img class="thumb" src="/images/corner-reflector.png" />
+        <div class="shorttext">Visualization of Corner Reflectors</div>
+        <div class="longtext">
+            <p>I made <a target="_blank" href="http://wellcaffeinated.github.com/Optics/corner-reflector">a little visualization</a> 
+                to compliment the video about corner reflectors by 
+                Henry (<a target="_blank" href="http://minutephysics.com/">MinutePhysics</a>) 
+                and Destin (<a target="_blank" href="http://www.youtube.com/user/destinws2">Smarter Every Day</a>). 
+                You can <a target="_blank" href="http://wellcaffeinated.github.com/Optics/corner-reflector">visit the full version (and watch the video)</a>, 
+                or play with this embedded version. Enjoy :)</p>
+        </div>
+        <script class="media" type="text/template">
+            <iframe src="http://wellcaffeinated.github.com/Optics/corner-reflector/embed.html" frameborder="0" height="500" width="500"> </iframe>
+        </script>
+    </div>
+
+    <div class="item">
+        <img class="thumb" width="685" src="http://content.screencast.com/users/jpalfr/folders/Jing/media/0f749363-70e4-46eb-9787-3d5561b58cfd/00000146.png" />
+        <div class="shorttext">YouTube Subtitle Explorer</div>
+        <div class="longtext">
+            <p><a target="_blank" href="http://translate.minutephysics.com">Visit the original</a></p>
+            <p>With creative input from <a target="_blank" href="http://minutephysics.com">Henry Reich of 
+                MinutePhysics</a> I designed and developed the 
+                <a target="_blank" href="/projects/youtube-subtitle-explorer">YouTube Subtitle Explorer</a>, 
+                an open-source project that facilitates crowdsourcing the translation of 
+                YouTube video subtitles. It was developed primarily with the 
+                <a target="_blank" href="http://silex.sensiolabs.org">Silex PHP Microframework</a>, 
+                <a target="_blank" href="http://twitter.github.com/bootstrap/index.html">Twitter Bootstrap</a>, 
+                and <a target="_blank" href="http://requirejs.org">RequireJS</a>. It provides users and 
+                administrators with a large array of features, including: caption submission 
+                moderation, batch approval of captions that are automatically uploaded to YouTube, 
+                google OpenID authentication, automatic updates, etc...</p>
+        </div>
+    </div>
+</div>
+
+
+<h2><a target="_blank" href="https://coderwall.com/wellcaffeinated">Coderwall</a> Badges</h2>
+
+<div id="coderwall-badges">Loading...</div>
+
+<script>
+require(['boot-index'], function(){
+require(
+[
+    'jquery',
+    'tpl!templates/coderwall.tpl'
+],
+function(
+    $,
+    tpl
+){
+    $.ajax({
+        url: 'https://coderwall.com/wellcaffeinated.json',
+        dataType: 'jsonp',
+        success: function(response){
+
+            $('#coderwall-badges').html( tpl.render(response.data) );
+        }
+    });
+}
+);
+});
+</script>

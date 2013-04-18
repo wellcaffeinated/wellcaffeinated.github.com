@@ -1,0 +1,59 @@
+//
+// Tile Layout
+//
+
+//
+// Own mixins for special tile layout
+//
+
+@function tile-span-fluid($n, $margin: $blueprint-liquid-grid-margin) {
+    $grid-width: ((100% - $margin * ($blueprint-liquid-grid-columns - 1))/$blueprint-liquid-grid-columns);
+    @return $grid-width * $n + $margin * ($n - 1) - ($n * $margin / $blueprint-liquid-grid-columns); 
+}
+
+@mixin tile-container($margin: $blueprint-liquid-grid-margin) {
+    min-width: $blueprint-liquid-container-min-width;
+    width: ($blueprint-liquid-container-width + $margin);
+    margin-left: -$margin;
+    @include clearfix; 
+}
+
+@mixin tile-column($n, $margin: $blueprint-liquid-grid-margin) {
+    @include float-left;
+    overflow: hidden;
+    width: tile-span-fluid($n, $margin);
+    margin-left: $margin; 
+}
+
+.tile-layout {
+
+    // margins are relative to widths
+    //margin-bottom: $blueprint-liquid-grid-margin;
+
+    // columns
+    @for $n from 2 to 3 {
+
+        &.col-#{$n} {
+
+            // correct for margin % difference
+            $margin: 4 * $blueprint-liquid-grid-margin / $n;
+            
+            @include tile-container($margin);
+            overflow: visible;
+            @include clearfix;
+
+            .tile {
+                @include tile-column($blueprint-liquid-grid-columns / $n, $margin);
+                margin-bottom: $margin;
+            }
+
+            .tile.span2 {
+                @include tile-column(2 * $blueprint-liquid-grid-columns / $n, $margin);
+            }
+
+            .tile.span3 {
+                @include tile-column(3 * $blueprint-liquid-grid-columns / $n, $margin);
+            }
+        }
+    }
+}

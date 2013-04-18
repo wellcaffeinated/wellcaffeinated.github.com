@@ -23,6 +23,8 @@ require.config({
         'json': 'plugins/json',
 
         'dot' : 'vendor/doT',
+
+        'stapes': 'vendor/stapes',
         
         'jquery': 'vendor/jquery.min',
         'jquery.highlight': 'vendor/jquery.highlight',

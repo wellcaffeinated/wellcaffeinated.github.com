@@ -19,11 +19,49 @@ $dropdownLinkColorHover: $wellblack;
 @import "compass_twitter_bootstrap";
 @import "compass_twitter_bootstrap_responsive";
 
-// @import "compass_twitter_bootstrap/_variables.scss";
-// @import "compass_twitter_bootstrap/_mixins.scss";
-// @import "compass_twitter_bootstrap/_reset.scss";
-@import "_mixins.scss";
-@import "_typography.scss";
+// Liquid grids
+$grid-background-force-fluid: true;
+$blueprint-liquid-grid-columns: 24;
+$blueprint-liquid-grid-margin: 16/980 * 100%;
+$blueprint-liquid-grid-width: ((100% - $blueprint-liquid-grid-margin * ($blueprint-liquid-grid-columns - 1))/$blueprint-liquid-grid-columns);
+$blueprint-liquid-container-width: 100%;
+$blueprint-liquid-container-min-width: none;
+@import "blueprint/liquid";
+
+// @import "compass_twitter_bootstrap/_variables";
+// @import "compass_twitter_bootstrap/_mixins";
+// @import "compass_twitter_bootstrap/_reset";
+@import "_mixins";
+@import "_typography";
+@import "compass/css3/opacity";
+@import "components/_tiles";
+@import "components/_overlay";
+
+.overlay-wrap .overlay > .close {
+    top: 0;
+    color: $wellblack;
+    width: 42px;
+    text-indent: -9999em;
+    overflow: hidden;
+    float: none;
+    font-size: 20px;
+    line-height: 0;
+    @include text-shadow( none );
+    @include opacity( 1 );
+
+    &:hover {
+        color: $wellred;
+    }
+    
+    &:after {
+        font-family: 'WebSymbolsRegular';
+        content: '\'';
+        display: block;
+        text-indent: 0;
+        text-align: center;
+        line-height: 42px;
+    }
+}
 
 pre {
     background: #fff;
@@ -53,6 +91,8 @@ a.icon:focus {
     text-decoration: none;
 }
 
+@import 'components/_showcase';
+
 /* style */
 #container {
 
@@ -76,12 +116,8 @@ a.icon:focus {
     background: $wellbeige;
 
     .inner {
-        padding: rhythm(1) 6%;
+        padding: rhythm(1.5) 6%;
         width: auto;
-
-        & > div {
-            margin-bottom: rhythm(1);
-        }
     }
 }
 
@@ -304,7 +340,7 @@ a.icon:focus {
 
     p {
         font: inherit;
-        color: lighten(black, 22);
+        color: lighten(black, 26);
     }
 
     // p,
@@ -488,13 +524,39 @@ ul.tags {
     margin-top: 2em;
 }
 
-/* trinkits */
-#coderwall-badges > ul {
-    margin: 0;
+a.profile-link {
+    @include adjust-font-size-to(26px);
+    margin: 0 rhythm(.5);
+    &:first-child {
+        margin-left: 0;
+    }
 }
-.coderwall-badge {
-    @extend .media-object;
 
+/* trinkits */
+#coderwall-badges {
+
+    $margin: 4 * $blueprint-liquid-grid-margin / 2;
+            
+    & > ul {
+        margin: 0;
+        @include tile-container($margin);
+        @include clearfix2;
+        overflow: visible;
+    }
+    .coderwall-badge {
+        @extend .media-object;
+        margin: 0;
+        @include tile-column($blueprint-liquid-grid-columns / 2, $margin);
+        margin-bottom: $margin;
+    }
+}
+
+@media only screen and (max-width: 1100px) and (min-width: 768px){
+    #coderwall-badges {
+        .coderwall-badge {
+            width: 100%;
+        }
+    }
 }
 
 //      Tablet Layout: 768px.
@@ -587,5 +649,11 @@ ul.tags {
     #site-logo {
         font-size: 6.8462em;
         letter-spacing: 0;
+    }
+
+    #coderwall-badges {
+        .coderwall-badge {
+            width: 100%;
+        }
     }
 }
