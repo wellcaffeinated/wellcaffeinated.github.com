@@ -10,10 +10,6 @@ require.config({
 
         'jquery.highlight': {
             deps: ['jquery']
-        },
-
-        'dot': {
-            exports: 'doT'
         }
     },
 
