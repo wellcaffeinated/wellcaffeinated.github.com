@@ -4,6 +4,13 @@ boot-index.js
 require-config.js
 boot-index.js
 vendor/jquery.min.js
+vendor/stapes.js
+plugins/text.js
+vendor/doT.js
+plugins/tpl.js
+tpl!templates/overlay.tpl
+modules/overlay.js
+tpl!templates/overlay-showcase.tpl
 vendor/jquery.highlight.js
 vendor/bootstrap/bootstrap-affix.js
 vendor/bootstrap/bootstrap-typeahead.js

@@ -23,6 +23,8 @@ author :
 
 dnsprefetch: ["ajax.googleapis.com", "apis.google.com", "wellcaffeinated.disqus.com", "mediacdn.disqus.com", "plus.google.com", "plusone.google.com", "ssl.gstatic.com", "s.ytimg.com", "www.forkosh.com"]
 
+cachebust: "?_v=1.0.0"
+
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
 # Most places will/should use BASE_PATH to make the urls
