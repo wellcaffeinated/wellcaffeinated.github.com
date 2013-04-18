@@ -1,5 +1,8 @@
 window.require = window.require || {config: function(c){window.require = c;}}
 require.config({
+
+    urlArgs: "_v=1.0.0",
+
     shim: {
         'bootstrap-affix': {
             deps: ['jquery']
