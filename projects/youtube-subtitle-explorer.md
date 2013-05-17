@@ -75,7 +75,9 @@ For Google:
 4. Click "Create an OAuth 2.0 client ID..."
 5. Enter the product name: "YTSE"
 6. Select Application Type = "Web Application"
-7. In the "Your site or hostname" section, unless you have a secure site, change the protocol to `http` and enter the url to get to the app. (i.e. if your installation is on example.com in the subfolder translations/, you would enter: example.com/translations/ ). Double check that the callback field gets correctly assigned to the path login/authenticate/callback (eg: if your installation is on http://example.com in the subfolder translations/, the callback field should end up being: http://example.com/translations/login/authenticate/callback)
+7. In the "Your site or hostname" section, unless you have a secure site, change the protocol to `http` and enter the url to get to the app. (i.e. if your installation is on example.com in the subfolder translations/, you would enter: example.com/translations/ ). Click Continue.
+8. You'll need to click "more options" in order to specify the "Authorized Redirect URIs" field. Specify it as your homepage with the path login/authenticate/callback (eg: if your installation is on http://example.com in the subfolder translations/, the field should end up being: http://example.com/translations/login/authenticate/callback)
+9. The "Javascript Origins" field should be the top-level (sub)-domain (eg: http://example.com)
 
 **SECURITY NOTE**: if your system ever becomes comprimised, or you suspect it may be comprimised, the above URLs will allow you to *change your client secret* and invalidate API keys. This is the first thing you should do if you think someone has hacked your system.
 
