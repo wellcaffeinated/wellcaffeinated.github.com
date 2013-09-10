@@ -1,5 +1,10 @@
 ---
 published: false
+layout: post
+category: articles
+tags: 
+  - development
+  - physics
 ---
 
 ## PhysicsJS - I wrote a physics engine for javascript
