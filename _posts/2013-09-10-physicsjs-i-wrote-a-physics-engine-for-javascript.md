@@ -10,8 +10,7 @@ title: "PhysicsJS - I wrote a physics engine for javascript"
 
 I've finally [released a little project][physicsjs] I've been working on lately: [PhysicsJS][physicsjs]. It's a physics engine written in javascript. For those who haven't used or heard of a physics engine before, a physics engine is a library that helps simulate physical realism in a computer program. For example, here's a little jsFiddle of a classic tearable cloth simulation I made with PhysicsJS. You can use your mouse to move and even tear the cloth.
 
-<iframe width="100%" height="300" src="http://jsfiddle.net/wellcaffeinated/MEgG3/embedded/result,js,html,css/" allowfullscreen="allowfullscreen" frameborder="0">
-</iframe>
+<iframe width="100%" height="300" src="http://jsfiddle.net/wellcaffeinated/MEgG3/embedded/result,js,html,css/" allowfullscreen="allowfullscreen" frameborder="0"> </iframe>
 
 It's not quite the same as the type of physics simulation a physicist would use, because generally a physics engine will do computations in real time, so the algorithms need to be fast. The algorithms in (real-time) physics engines will cut some corners to acheive an effect that is physically plausible to the eye, even if it's not what would *really* happen. Usually they are used in game development but there are, of course, other applications also.
 
