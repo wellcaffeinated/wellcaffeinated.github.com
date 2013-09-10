@@ -11,7 +11,7 @@ published: true
 
 <a href="/demos/asm-js-physics.html"><img style="float: right" src="http://content.screencast.com/users/jpalfr/folders/Jing/media/8d32d26c-7384-440c-b99b-c86c7e77952f/00000016.png" alt="Asm.js Physics Demo"/></a>
 
-Lately I've been **very** intrigued about Mozilla's [asm.js specification](asmjs).
+Lately I've been **very** intrigued about Mozilla's [asm.js specification][asmjs].
 **ASM.js is a subset of javascript** that allows javascript interpreters to compile
 code ahead of time, directly into assembly code. This results in huge speed increases.
 
@@ -25,7 +25,7 @@ Yes. We're running high performance 3D games in web browsers now...
 <iframe width="560" height="315" src="http://www.youtube.com/embed/XsyogXtyU9o" frameborder="0" allowfullscreen="allowfullscreen">
 </iframe>
 
-[John Resig has a nice writeup about asm.js](resig), including a QA transcript 
+[John Resig has a nice writeup about asm.js][resig], including a QA transcript 
 with David Herman (Senior Researcher at Mozilla Research). You should give it
 a read if you're interested.
 
@@ -38,7 +38,7 @@ go over asm.js.
 Firstly, a disclaimer. asm.js code is a pain to write by hand. (I do so because I
 drink too much coffee...) I don't really recommend starting any large project thinking that you'll
 write it in asm.js from scratch. Likely, the best way to leverage asm.js will be to write in
-another language (like C++, or something like [LLJS](lljs)), and then
+another language (like C++, or something like [LLJS][lljs]), and then
 "compile" it into asm.js. The painful part is mainly that it feels like
 writing in two languages at once. It's javascript... but it feels like something
 else... anyways, let's move on.
@@ -92,13 +92,13 @@ types, so this is done by transforming variables into their types like so:
     variable_float = +variabla_float;
 
 I'm not going to go into great detail about the specifics of hand crafting
-asm.js code. For that you should check out [John Resig's article](resig) and
-[read the specification](asmjs).
+asm.js code. For that you should check out [John Resig's article][resig] and
+[read the specification][asmjs].
 
 However, one of the big pains to writing it by hand is dealing with memory allocation.
 The only thing you really have access to in terms of memory, is the fixed-size
-[ArrayBuffer](mdnarraybuffer) you specify when you instantiate the asm.js module. You then
-have to then create [views into the array buffer](mdnviews) to manipulate data.
+[ArrayBuffer][mdnarraybuffer] you specify when you instantiate the asm.js module. You then
+have to then create [views into the array buffer][mdnviews] to manipulate data.
 
 ## Easier asm.js Memory Management
 
