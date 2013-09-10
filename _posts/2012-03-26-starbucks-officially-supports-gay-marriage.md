@@ -47,7 +47,7 @@ Starbucks coffee is not my favorite, to say the least. I actually have trouble d
 
 Impressive. That makes me want to buy a Starbucks coffee. (Likely one of their clover coffees that are actually pretty good, if expensive).
 
-Of course, as the saying goes, "If you aren't pissing someone off, you aren't doing it right". Naturally there are a <a href="http://www.nationformarriage.org/site/apps/nlnet/content2.aspx?c=omL2KeN0LzH&b=5075187&ct=11668189&notoc=1" rel="nofollow">group of bigots</a> who have started a "Dump Starbucks" campaign in the name of, so called, sanctity of marriage.
+Of course, as the saying goes, "If you aren't pissing someone off, you aren't doing it right". Naturally there are a <a href="http://www.nationformarriage.org/site/apps/nlnet/content2.aspx?c=omL2KeN0LzH&amp;b=5075187&amp;ct=11668189&amp;notoc=1" rel="nofollow">group of bigots</a> who have started a "Dump Starbucks" campaign in the name of, so called, sanctity of marriage.
 
 > "We are today announcing a sustained public campaign calling on Starbucks to stop waging war against marriage, and the views of more than half its worldwide customers.
 > Starbucks should be in the business of offering all its diverse customers a great cup of coffee, not taking sides against the views of its customers, vendors, and employees
