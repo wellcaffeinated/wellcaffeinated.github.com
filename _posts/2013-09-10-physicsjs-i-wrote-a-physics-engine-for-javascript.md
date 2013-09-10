@@ -1,4 +1,4 @@
-#---
+---
 title: "PhysicsJS: I wrote a physics engine for javascript"
 layout: post
 category: articles
@@ -6,7 +6,7 @@ tags:
   - development
   - physics
 published: true
-#---
+---
 
 I've finally [released a little project][physicsjs] I've been working on lately: [PhysicsJS][physicsjs]. It's a physics engine written in javascript. For those who haven't used or heard of a physics engine before, a physics engine is a library that helps simulate physical realism in a computer program. For example, here's a little jsFiddle of a classic tearable cloth simulation I made with PhysicsJS. You can use your mouse to move and even tear the cloth.
 
