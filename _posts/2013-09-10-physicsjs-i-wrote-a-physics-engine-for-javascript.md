@@ -1,5 +1,5 @@
 ---
-title: "PhysicsJS - I wrote a physics engine for javascript"
+title: "PhysicsJS: I wrote a physics engine for javascript"
 layout: post
 category: articles
 tags: 
