@@ -6,3 +6,6 @@ title : Sitemap
 {{site.production_url}}{{ page.url }}{% endfor %}
 {% for post in site.posts %}{% unless post.draft %}
 {{site.production_url}}{{ post.url }}{% endunless %}{% endfor %}
+
+{{site.production_url}}/PhysicsJS
+{{site.production_url}}/Optics/corner-reflector

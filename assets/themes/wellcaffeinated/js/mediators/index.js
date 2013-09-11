@@ -170,7 +170,9 @@ define(
 
             $('#showcase-wrap').on('click', '.item', function(e){
 
-                var $this = $(this);
+                var $this = $(this)
+                    ,id = $this.attr('id')
+                    ;
 
                 overlay.open({
                     content: {
@@ -180,6 +182,20 @@ define(
                     },
                     template: tplOverlayShowcase
                 });
+
+                if ( id ){
+                    overlay.on('open', function( modal, e ){
+                        
+                        $(window).trigger('showcase-'+id, overlay.getElement());
+                        overlay.off( e.type, e.handler );
+
+                    });
+                    overlay.on('close', function( modal, e ){
+
+                        $(window).trigger('showcase-close-'+id, overlay.getElement());
+                        overlay.off( e.type, e.handler );
+                    });
+                }
             });
         });
     }

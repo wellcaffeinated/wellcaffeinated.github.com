@@ -27,17 +27,18 @@ group: navigation
 
 <div id="showcase-wrap">
 
-    <div class="item">
+    <div class="item" id="physicsjs-demo">
         <img class="thumb" width="685" src="/images/physics-js.png" />
-        <div class="shorttext">PhysicsJS - (in progress)</div>
+        <div class="shorttext">PhysicsJS</div>
         <div class="longtext">
-            <p><a target="_blank" href="http://github.com/wellcaffeinated/PhysicsJS">Visit the github page</a></p>
+            <p><a target="_blank" href="http://wellcaffeinated.net/PhysicsJS">Visit the project page</a></p>
             <p>
-                A work in progress. I'm creating an easy-to-use physics engine in javascript.
-                This will allow front-end developers to easily create 2D physics simulations.
+                I've created a physics engine for javascript called PhysicsJS. You can <a href="http://wellcaffeinated.net/articles/2013/09/10/physicsjs-i-wrote-a-physics-engine-for-javascript/">read more about it in this blog post</a>, or <a target="_blank" href="http://wellcaffeinated.net/PhysicsJS">visit the project page</a>.
             </p>
-            <p>Graphical examples coming soon!</p>
         </div>
+        <script class="media" type="text/template">
+            <div id="physicsjs-demo-viewport"></div>
+        </script>
     </div>
 
     <div class="item">
@@ -127,5 +128,146 @@ function(
     });
 }
 );
+});
+</script>
+
+<script>
+require(['boot-index'], function(){
+require(
+[
+    'jquery'
+],
+function( $ ){
+
+    $(window).on('showcase-physicsjs-demo', function( e, el ){
+        require({
+            packages: [
+                {
+                  name: 'physicsjs',
+                  location: '//wellcaffeinated.net/PhysicsJS/assets/scripts/vendor/physicsjs',
+                  main: 'physicsjs-full-0.5.0.min'
+                }
+            ]
+        }, [
+            'physicsjs',
+            '//wellcaffeinated.net/PhysicsJS/examples/demo-mouse-events.js'
+        ], function( Physics ){
+
+            var $el = $(el).find('#physicsjs-demo-viewport').empty()
+                ,world = Physics()
+                ,viewWidth = $el.width()
+                ,viewHeight = 400
+                ,renderer = Physics.renderer('canvas', {
+                    el: $el.get(0),
+                    width: viewWidth,
+                    height: viewHeight,
+                    styles: {
+                        'circle': {
+                            strokeStyle: 'hsla(60, 37%, 17%, 1)',
+                            lineWidth: 1,
+                            fillStyle: 'hsla(60, 37%, 57%, 0.8)',
+                            angleIndicator: 'hsla(60, 37%, 17%, 0.4)'
+                        },
+                        'convex-polygon' : {
+                            strokeStyle: 'hsla(60, 37%, 17%, 1)',
+                            lineWidth: 1,
+                            fillStyle: 'hsla(60, 47%, 37%, 0.8)',
+                            angleIndicator: 'none'
+                        }
+                    }
+                })
+                ,viewportBounds = Physics.aabb(0, 0, viewWidth, viewHeight)
+                ,edgeBounce
+                ;
+
+            world.add( renderer );
+            world.add( Physics.behavior('demo-mouse-events', { el: $el }) );
+
+            // constrain objects to these bounds
+            edgeBounce = Physics.behavior('edge-collision-detection', {
+                aabb: viewportBounds,
+                restitution: 0.2,
+                cof: 0.8
+            });
+
+            var square = [{
+                x: 0,
+                y: 40
+            }, {
+                x: 40,
+                y: 40
+            }, {
+                x: 40,
+                y: 0
+            }, {
+                x: 0,
+                y: 0
+            }];
+
+            // delay the launching
+            setTimeout(function () {
+
+                world.add(projectile);
+
+            }, 2000);
+
+            var squares = [];
+            for (var i = 0, l = 24; i < l; ++i) {
+
+                // projectile
+                projectile = Physics.body('circle', {
+                    x: -20,
+                    y: viewHeight - 120,
+                    vx: 2,
+                    mass: 4,
+                    radius: 20,
+                    restitution: 0.99,
+                    angularVelocity: 0
+                });
+
+                // squares
+                squares.push(Physics.body('convex-polygon', {
+                    vertices: square,
+                    x: 42 * (i / 6 | 0) + viewWidth - 40 * 5,
+                    y: 40 * (i % 6) + viewHeight - 6 * 40 + 15,
+                    vx: 0,
+                    cof: 0.99,
+                    restitution: 0.99,
+                    fixed: false
+                }));
+            }
+
+            world.add(squares);
+
+            world.add(Physics.behavior('body-collision-detection', {
+                checkAll: false
+            }));
+            world.add(Physics.behavior('sweep-prune'));
+            world.add(Physics.behavior('body-impulse-response'));
+
+            world.add(edgeBounce);
+
+            // add gravity
+            world.add(Physics.behavior('constant-acceleration'));
+
+            Physics.util.ticker.subscribe(function( time, dt ){
+
+                world.step( time );
+
+                // only render if not paused
+                if ( !world.isPaused() ){
+                    world.render();
+                }
+            });
+
+            Physics.util.ticker.start();
+            world.unpause();
+
+            $(window).one('showcase-close-physicsjs-demo', function(){
+                world.pause();
+            });
+        });
+    });
+});
 });
 </script>
