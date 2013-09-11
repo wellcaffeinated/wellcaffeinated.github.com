@@ -15,7 +15,7 @@ The webapp I wrote in about 30 minutes is not worth putting up here. It basicall
 
 All I needed to do was place my phone on the armrest of the seat and click start. Here's a graph of the data:
 
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js"> {"dataSourceUrl":"//docs.google.com/spreadsheet/tq?key=0Akupmpq7rS__dEhtYVE3dDZkZnI5dTAweHlWUndQMXc&amp;transpose=0&amp;headers=0&amp;range=B1%3AC1207&amp;gid=0&amp;pub=1","options":{"vAxes":[{"useFormatFromData":true,"title":"Android Angle (degrees)","minorGridlines":{"count":"0"},"minValue":null,"viewWindowMode":"pretty","viewWindow":{"min":null,"max":null},"gridlines":{"count":"8"},"maxValue":null},{"useFormatFromData":true,"minValue":null,"viewWindowMode":"pretty","viewWindow":{"min":null,"max":null},"maxValue":null}],"titleTextStyle":{"bold":true,"color":"#000","fontSize":16},"series":{"0":{"pointSize":2}},"booleanRole":"certainty","title":"Airbus A320 Orientation Data from Android Web App","animation":{"duration":500},"pointSize":7,"legend":"right","lineWidth":0,"hAxis":{"useFormatFromData":true,"title":"Time (s)","formatOptions":{"scaleFactor":null},"minValue":125,"viewWindowMode":"explicit","gridlines":{"count":"10"},"viewWindow":{"min":125,"max":230},"maxValue":230},"tooltip":{},"width":'auto',"height":'auto'},"state":{},"view":{},"chartType":"ScatterChart","chartName":"Chart 1"}  </script>
+<img src="https://docs.google.com/spreadsheet/oimg?key=0Akupmpq7rS__dEhtYVE3dDZkZnI5dTAweHlWUndQMXc&amp;oid=2&amp;zx=x1yjztp0l3so" />
 
 Not too shabby! It's pretty noisy, but you can see the takeoff pretty clearly.
 
