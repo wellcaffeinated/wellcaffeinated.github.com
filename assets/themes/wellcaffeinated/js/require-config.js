@@ -1,7 +1,7 @@
 window.require = window.require || {config: function(c){window.require = c;}}
 require.config({
 
-    urlArgs: "_v=1.0.0",
+    urlArgs: "_v=1.0.1",
 
     shim: {
         'bootstrap-affix': {
