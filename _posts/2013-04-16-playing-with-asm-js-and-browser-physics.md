@@ -196,7 +196,7 @@ objects with the "use asm" declaration, and without it.
 
 The results in Firefox 23 nightly build:
 
-<iframe width='500' height='300' frameborder='0' src='https://docs.google.com/spreadsheet/pub?key=0Akupmpq7rS__dDhCdEhGM19HdVpJV0hPbnVxeDlxYnc&single=true&gid=0&output=html&widget=true'>
+<iframe width='500' height='300' frameborder='0' src='https://docs.google.com/spreadsheet/pub?key=0Akupmpq7rS__dDhCdEhGM19HdVpJV0hPbnVxeDlxYnc&amp;single=true&amp;gid=0&amp;output=html&amp;widget=true'>
 </iframe>
 
 Aside for some weirdness on the last test, **enabling asm.js is significantly faster** for
