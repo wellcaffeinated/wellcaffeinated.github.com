@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: "A Web Developer's Tribute to autumn"
 tags: 
   - development
