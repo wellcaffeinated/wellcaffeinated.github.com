@@ -199,7 +199,7 @@
 
 		<script type="text/javascript"> 
 		  var _gaq = _gaq || [];
-		  _gaq.push(['_setAccount', 'UA-86951-7']);
+		  _gaq.push(['_setAccount', 'UA-28341644-1']);
 		  _gaq.push(['_trackPageview']);
 
 		  (function() {
@@ -422,6 +422,19 @@
 
 				Physics.util.ticker.subscribe( loop );
 				Physics.util.ticker.start();
+
+				// magic to trigger GPU
+				world.subscribe('render', function( data ){
+					var style;
+					for ( var i = 0, l = data.bodies.length; i < l; ++i ){
+						
+						style = data.bodies[ i ].view.style;
+						style.WebkitTransform += ' translateZ(0)';
+						style.MozTransform += ' translateZ(0)';
+						style.MsTransform += ' translateZ(0)';
+						style.transform += ' translateZ(0)';
+					}
+				});
 			}
 
 			function run() {
