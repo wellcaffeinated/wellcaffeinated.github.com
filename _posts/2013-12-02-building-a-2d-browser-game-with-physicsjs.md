@@ -1,6 +1,5 @@
 ---
-published: false
-preview: true
+published: true
 title: "Building a 2D Asteroids Game with PhysicsJS"
 tags: 
   - development
