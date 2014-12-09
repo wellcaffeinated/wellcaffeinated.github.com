@@ -1,5 +1,11 @@
 ---
 published: false
+title: "Sending Cross-Domain Messages to an iFrame"
+tags: 
+  - development
+  - javascript
+layout: post
+category: articles
 ---
 
 While browsing [stackoverflow](http://stackoverflow.com/questions/3177261/set-a-variable-in-an-iframe) recently, I discovered a trick to send arbitrary data to an iframe, even if it's across domains!
