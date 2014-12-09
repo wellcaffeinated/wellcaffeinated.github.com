@@ -13,12 +13,18 @@ function getHashData(){
     return data;
 }
 
-// when the hash changes we check the new data and print it out
-window.addEventListener('hashchange', function(){
-    var data = getHashData();
+function showMsg(){
+	var data = getHashData();
     if ( data && data.text ){
         el.innerHTML += "<br/>Received msg: " + data.text;
     }
+}
+
+// in case we sent data on first load.
+showMsg();
+// when the hash changes we check the new data and print it out
+window.addEventListener('hashchange', function(){
+    showMsg();
 });
 </script>
 </body></html>
