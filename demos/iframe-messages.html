@@ -1,0 +1,24 @@
+<!doctype html>
+<html><head></head><body>
+<p>Waiting for messages...</p>
+<div id="log"></div>
+<script>
+var el = document.getElementById('log');
+
+function getHashData(){
+    var data;
+    try {
+        data = JSON.parse(window.atob(window.location.hash.substr(1)));
+    } catch( e ){}
+    return data;
+}
+
+// when the hash changes we check the new data and print it out
+window.addEventListener('hashchange', function(){
+    var data = getHashData();
+    if ( data && data.text ){
+        el.innerHTML += "<br/>Received msg: " + data.text;
+    }
+});
+</script>
+</body></html>
